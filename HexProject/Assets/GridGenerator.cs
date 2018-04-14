@@ -23,8 +23,8 @@ public class GridGenerator : MonoBehaviour {
             {
                 for (int z = -gridsize; z<gridsize; z++)
                 {
-                    truecoords.x = x - 0.5f * y;
-                    truecoords.y = y * Mathf.Sqrt(3);
+                    truecoords.x = x - y * 0.5f;
+                    truecoords.y = y * Mathf.Sqrt(3)*0.5f;
                     GameObject instance = Instantiate(Hex, truecoords, Quaternion.identity);
                     instance.transform.SetParent(gamefield);
                 }
