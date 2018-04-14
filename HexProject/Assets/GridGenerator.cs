@@ -4,43 +4,38 @@ using UnityEngine;
 
 public class GridGenerator : MonoBehaviour {
 
-    public int gridradius;
+    public int gridsize;
+    public GameObject Hex;
 
     private Transform gamefield;
 
-    private List<Vector3> hexpositions = new List<Vector3>();
-
-    private Vector3 trueposition = new Vector3();
-
-    public GameObject Hex;
+    private List<Vector3Int> hexcoords = new List<Vector3Int>();
+    private Vector2 truecoords = new Vector2();
 
 	// Use this for initialization
-	void Start () {
-
-        hexpositions.Clear();
+	void Start ()
+    {
         gamefield = new GameObject("Game Field").transform;
 
-        for (int x = 0; x < gridradius; x++){
-            for (int y = 0; y < gridradius; y++){
-                for (int z = 0; z < gridradius; z++)
+        for (int x = -gridsize; x<gridsize;x++)
+        {
+            for (int y = - gridsize; y<gridsize;y++)
+            {
+                for (int z = -gridsize; z<gridsize; z++)
                 {
-                    hexpositions.Add(new Vector3(x, y, z));
-                    trueposition.x = y - z;
-                    trueposition.y = z - x;
-                    GameObject instance = Instantiate(Hex, new Vector3(trueposition.x, trueposition.y, 0f), Quaternion.identity);
+                    truecoords.x = x - 0.5f * y;
+                    truecoords.y = y * Mathf.Sqrt(3);
+                    GameObject instance = Instantiate(Hex, truecoords, Quaternion.identity);
+                    instance.transform.SetParent(gamefield);
                 }
             }
         }
-		
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
-        int i = 0;
-        if(i == 0)
-        {
-            Debug.Log("KEKS");
-        }
+	void Update ()
+    {
+		
 	}
 }
