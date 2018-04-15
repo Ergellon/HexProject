@@ -222,6 +222,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridsize: 3
+  max_x: 0
+  max_y: 0
+  min_x: 0
+  min_y: 0
   Hex: {fileID: 1213449305256428, guid: a79c4e6b0129c034a95a8b6a765d4c8f, type: 2}
 --- !u!4 &1290287027
 Transform:

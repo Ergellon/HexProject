@@ -5,6 +5,8 @@ using UnityEngine;
 public class GridGenerator : MonoBehaviour {
 
     public int gridsize;
+    public float max_x, max_y,min_x,min_y;
+
     public GameObject Hex;
 
     private Transform gamefield;
@@ -16,20 +18,50 @@ public class GridGenerator : MonoBehaviour {
 	void Start ()
     {
         gamefield = new GameObject("Game Field").transform;
+        int t = 0;
+        for (int x = -gridsize; x<= gridsize;x++)
+        {
+            if (x <= 0)
+            {
+                for (int y = t; y <= gridsize; y++)
+                {
+                    truecoords.x = x * 3f / 4f;
+                    truecoords.y = (y + x / 2f) * Mathf.Sqrt(3) * 0.5f;
+                    GameObject instance = Instantiate(Hex, truecoords, Quaternion.Euler(0, 0, 30));
+                    instance.transform.SetParent(gamefield);
+                }
+                t--;
+            }
+            else
+            {
+                for (int y = -gridsize; y<-t-1; y++)
+                {
+                    truecoords.x = x * 3f / 4f;
+                    truecoords.y = (y + x / 2f) * Mathf.Sqrt(3) * 0.5f;
+                    GameObject instance = Instantiate(Hex, truecoords, Quaternion.Euler(0, 0, 30));
+                    instance.transform.SetParent(gamefield);
+                }
+                t++;
+            }
+        }
 
-        for (int x = -gridsize; x<gridsize;x++)
+
+
+
+        /*for (int x = -gridsize; x<gridsize;x++)
         {
             for (int y = - gridsize; y<gridsize;y++)
             {
-                for (int z = -gridsize; z<gridsize; z++)
+                
+                    truecoords.x = x*3f/4f ;
+                    truecoords.y = (y+x/2f)*Mathf.Sqrt(3)*0.5f;
+                if (truecoords.y < max_y && truecoords.y > min_y)
                 {
-                    truecoords.x = x - y * 0.5f;
-                    truecoords.y = y * Mathf.Sqrt(3)*0.5f;
-                    GameObject instance = Instantiate(Hex, truecoords, Quaternion.identity);
+                    GameObject instance = Instantiate(Hex, truecoords, Quaternion.Euler(0, 0, 30));
                     instance.transform.SetParent(gamefield);
                 }
             }
-        }
+        }*/
 
 	}
 	
