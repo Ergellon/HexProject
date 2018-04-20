@@ -6,12 +6,8 @@ public class HexProperties {
 
     public string type = null;
 
-
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
+    public HexProperties(string t)
+    {
+        type = t;
+    }
 }

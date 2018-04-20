@@ -13,8 +13,8 @@ public class GridGenerator : MonoBehaviour {
 
     private Vector2 truecoords = new Vector2();
 
-    public GameObject gamefieldmanager;
-    public GameFieldManager gamefieldmanagerscript;
+    // public GameObject gamefieldmanager;
+    public GameFieldManager gamefieldmanager;
 
 
 
@@ -25,13 +25,15 @@ public class GridGenerator : MonoBehaviour {
         GameObject instance = Instantiate(Hex, truecoords, Quaternion.Euler(0, 0, 30));
         instance.transform.SetParent(gamefield);
 
-       gamefieldmanagerscript.AddToDictionary(x, y);
+       gamefieldmanager.AddToDictionary(x, y);
     }
 
     public void GenerateField()
     {
         gamefield = new GameObject("Game Field").transform;
-        gamefieldmanagerscript = gamefieldmanager.GetComponent<GameFieldManager>();
+
+
+        //gamefieldmanagerscript = gamefieldmanager.GetComponent<GameFieldManager>();
 
 
         int t = 0;
