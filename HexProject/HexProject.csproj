@@ -236,6 +236,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameFieldManager.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\GridGenerator.cs" />
     <Compile Include="Assets\HexProperties.cs" />
   </ItemGroup>

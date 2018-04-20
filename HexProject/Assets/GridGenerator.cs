@@ -16,6 +16,8 @@ public class GridGenerator : MonoBehaviour {
     public GameObject gamefieldmanager;
     public GameFieldManager gamefieldmanagerscript;
 
+
+
     void CreateHex (int x, int y)
     {
         truecoords.x = x * 3f / 4f;
@@ -26,31 +28,27 @@ public class GridGenerator : MonoBehaviour {
        gamefieldmanagerscript.AddToDictionary(x, y);
     }
 
-	// Use this for initialization
-	void Start ()
+    public void GenerateField()
     {
         gamefield = new GameObject("Game Field").transform;
-
-        gamefieldmanager = GameObject.FindGameObjectWithTag("GameFieldManager");
-
         gamefieldmanagerscript = gamefieldmanager.GetComponent<GameFieldManager>();
 
 
         int t = 0;
-        for (int x = -gridsize; x<= gridsize;x++)
+        for (int x = -gridsize; x <= gridsize; x++)
         {
             if (x <= 0)
             {
                 for (int y = t; y <= gridsize; y++)
                 {
                     CreateHex(x, y);
-                    
+
                 }
                 t--;
             }
             else
             {
-                for (int y = -gridsize; y<-t-1; y++)
+                for (int y = -gridsize; y < -t - 1; y++)
                 {
                     CreateHex(x, y);
 
@@ -58,13 +56,7 @@ public class GridGenerator : MonoBehaviour {
                 t++;
             }
         }
-        gamefieldmanagerscript.PrintList();
+    }
 
-	}
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 }

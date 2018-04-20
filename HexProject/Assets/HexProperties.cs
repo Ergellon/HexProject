@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HexProperties : MonoBehaviour {
+public class HexProperties {
 
     public string type = null;
 
@@ -11,7 +11,6 @@ public class HexProperties : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
