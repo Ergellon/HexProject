@@ -21,7 +21,7 @@ public class GameFieldManager : MonoBehaviour {
     public string Randomizer()
     {
         string t = "bug";
-        int r = Random.Range(0, 2);
+        int r = Random.Range(0, 3);
         switch (r)
         {
             case 0:
@@ -32,6 +32,9 @@ public class GameFieldManager : MonoBehaviour {
                 break;
             case 2:
                 t = "hill";
+                break;
+            default:
+                t = "water";
                 break;
         }
 
