@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 700890540}
   - component: {fileID: 700890539}
   m_Layer: 0
-  m_Name: GameFieldManager
+  m_Name: FieldController
   m_TagString: GameFieldManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 700890538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b282d2f5baaf774295ecb40b5aed1af, type: 3}
+  m_Script: {fileID: 11500000, guid: 37fe5067062d48841b987fc0ef90a8f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &700890540
@@ -261,8 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28bc402be4b87dc49baafcb7e8502929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generator: {fileID: 1290287026}
-  gamefieldmanager: {fileID: 700890539}
+  fieldgenerator: {fileID: 1290287026}
+  fieldcontroller: {fileID: 700890539}
   maincamera: {fileID: 627784564}
   text: {fileID: 1669139412}
   text2: {fileID: 1913057730}
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 1290287027}
   - component: {fileID: 1290287026}
   m_Layer: 0
-  m_Name: GridGenerator
+  m_Name: FieldGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,12 +303,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1290287025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11d55336998b22d44a736dcfe02a5612, type: 3}
+  m_Script: {fileID: 11500000, guid: 882efa7cd5251fe49824a7c2fb3ce088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gridsize: 3
   Hex: {fileID: 1213449305256428, guid: a79c4e6b0129c034a95a8b6a765d4c8f, type: 2}
-  gamefieldmanager: {fileID: 700890539}
+  fieldController: {fileID: 700890539}
 --- !u!4 &1290287027
 Transform:
   m_ObjectHideFlags: 0

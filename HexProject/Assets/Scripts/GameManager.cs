@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    public GridGenerator generator;
-    public GameFieldManager gamefieldmanager;
+    public FieldGenerator fieldgenerator;
+    public FieldController fieldcontroller;
     public Camera maincamera;
 
     [SerializeField]
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
         
-        generator.GenerateField();
+        fieldgenerator.GenerateField();
 		
 	}
 	
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour {
             //Debug.LogFormat("x={0} y={1}", hexcoords.x, hexcoords.y);
 
             HexProperties field;
-            gamefieldmanager.hexProperties.TryGetValue(hexcoords, out field);
+            fieldcontroller.hexProperties.TryGetValue(hexcoords, out field);
             //Debug.Log(field.type);
             text.text += field.type;
             

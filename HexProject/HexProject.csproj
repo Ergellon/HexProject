@@ -236,9 +236,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameFieldManager.cs" />
-    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\GridGenerator.cs" />
-    <Compile Include="Assets\HexProperties.cs" />
+    <Compile Include="Assets\Scripts\FieldController.cs" />
+    <Compile Include="Assets\Scripts\FieldGenerator.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HexCalculator.cs" />
+    <Compile Include="Assets\Scripts\HexProperties.cs" />
+    <Compile Include="Assets\Scripts\InputManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
