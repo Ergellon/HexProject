@@ -8,29 +8,25 @@ public class FieldGenerator : MonoBehaviour {
     public int gridsize;
 
     public GameObject Hex;
-
-    private Transform gamefield;
-
+    private Transform fieldcontainer;
     private Vector2 truecoords = new Vector2();
-
-    // public GameObject gamefieldmanager;
     public FieldController fieldController;
+    public HexCalculator hexCalculator;
 
 
 
     void CreateHex(int x, int y)
     {
-        truecoords.x = x * 3f / 4f;
-        truecoords.y = (y + x / 2f) * Mathf.Sqrt(3) * 0.5f;
-        GameObject instance = Instantiate(Hex, truecoords, Quaternion.Euler(0, 0, 30));
-        instance.transform.SetParent(gamefield);
+        truecoords = hexCalculator.HexToPixel(x,y);
+        GameObject instance = Instantiate(Hex, truecoords, Quaternion.Euler(0, 0, 0));
+        instance.transform.SetParent(fieldcontainer);
 
         fieldController.AddToDictionary(x, y);
     }
 
     public void GenerateField()
     {
-        gamefield = new GameObject("Game Field").transform;
+        fieldcontainer = new GameObject("Game Field").transform;
 
 
         //gamefieldmanagerscript = gamefieldmanager.GetComponent<GameFieldManager>();

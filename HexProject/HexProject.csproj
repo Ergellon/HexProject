@@ -243,6 +243,9 @@
     <Compile Include="Assets\Scripts\HexCalculator.cs" />
     <Compile Include="Assets\Scripts\HexProperties.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
+    <Compile Include="Assets\Scripts\UnitController.cs" />
+    <Compile Include="Assets\Scripts\UnitGenerator.cs" />
+    <Compile Include="Assets\Scripts\UnitProperties.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour {
 
-//THIS IS A STUB
+//stub
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class HexProperties {
 
     public string type = null;
+    public bool isoccupied = false;
 
     public HexProperties(string t)
     {
