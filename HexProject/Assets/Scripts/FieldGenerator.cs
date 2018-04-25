@@ -13,23 +13,54 @@ public class FieldGenerator : MonoBehaviour {
     public FieldController fieldController;
     public HexCalculator hexCalculator;
 
+    public GameObject grass, forest, rocks, lake, water;
+
 
 
     void CreateHex(int x, int y)
     {
-        truecoords = hexCalculator.HexToPixel(x,y);
-        GameObject instance = Instantiate(Hex, truecoords, Quaternion.Euler(0, 0, 0));
-        instance.transform.SetParent(fieldcontainer);
+        HexProperties hex;
 
-        fieldController.AddToDictionary(x, y);
+        fieldController.AddToDictionary(x, y);         // Creating actual hex
+
+        fieldController.hexProperties.TryGetValue(new Vector2Int(x, y), out hex);
+        hex.type = fieldController.RandomTileType();            //rolling hex type
+        
+        switch(hex.type)                //WHAT THE FUCK
+        {
+            case "grass":
+                Hex = grass;
+                break;
+            case "forest":
+                Hex = forest;
+                break;
+            case "rocks":
+                Hex = rocks;
+                break;
+            case "lake":
+                Hex = lake;
+                break;
+            case "water":
+                Hex = water;
+                break;
+            default:
+                Debug.Log("smthing goes wrong");
+                break;
+        }
+
+        truecoords = hexCalculator.HexToPixel(x,y);
+        GameObject instance = Instantiate(Hex, truecoords, Quaternion.Euler(0, 0, 0)); //Creating visual hex
+        instance.transform.SetParent(fieldcontainer);
+        fieldController.hextiles.Add(instance);
+
+
     }
+
+
 
     public void GenerateField()
     {
         fieldcontainer = new GameObject("Game Field").transform;
-
-
-        //gamefieldmanagerscript = gamefieldmanager.GetComponent<GameFieldManager>();
 
 
         int t = 0;
@@ -54,5 +85,6 @@ public class FieldGenerator : MonoBehaviour {
                 t++;
             }
         }
+
     }
 }

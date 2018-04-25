@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class UnitProperties : MonoBehaviour {
 
+
+    public string type;
+    public string owner;
+
+
 //stub
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fe5067062d48841b987fc0ef90a8f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hextiles: []
 --- !u!4 &700890540
 Transform:
   m_ObjectHideFlags: 0
@@ -391,6 +392,11 @@ MonoBehaviour:
   Hex: {fileID: 1213449305256428, guid: a79c4e6b0129c034a95a8b6a765d4c8f, type: 2}
   fieldController: {fileID: 700890539}
   hexCalculator: {fileID: 373090034}
+  grass: {fileID: 1535933754021038, guid: d2a734be637a0de4aae03fba9eace4dc, type: 2}
+  forest: {fileID: 1114802860710994, guid: 828fe24fce7e03e43a0e01d759ca0a28, type: 2}
+  rocks: {fileID: 1019469086548512, guid: 18c6c8e98811bcc45a804534c00c6bbf, type: 2}
+  lake: {fileID: 1972625362318318, guid: 8624c47b961d1404493ece56be2362a7, type: 2}
+  water: {fileID: 1281600694289154, guid: 7e318a8e3d5f04e46b89519b84c7b3d5, type: 2}
 --- !u!4 &1290287027
 Transform:
   m_ObjectHideFlags: 0
