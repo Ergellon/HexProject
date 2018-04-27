@@ -2,12 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitProperties : MonoBehaviour {
+public class UnitProperties {
 
 
     public string type;
-    public string owner;
+    public int owner;
 
+    public GameObject sprite;
 
-//stub
+    public UnitProperties()
+    {
+
+    }
+    public UnitProperties(int own)
+    {
+        owner = own;
+    }
+    
 }

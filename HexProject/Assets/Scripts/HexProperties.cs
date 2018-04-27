@@ -11,7 +11,7 @@ public class HexProperties {
 
     public HexProperties()
     {
-        type = "grass";
+        type = "water";
     }
 
     public HexProperties(string t)

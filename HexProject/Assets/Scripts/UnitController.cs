@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UnitController : MonoBehaviour {
 
-    //stub
-
     public Dictionary<Vector2Int, UnitProperties> unitProperties = new Dictionary<Vector2Int, UnitProperties>();
+
 }

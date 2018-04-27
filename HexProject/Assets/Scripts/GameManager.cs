@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
     public FieldController fieldcontroller;
     public Camera maincamera;
     public HexCalculator hexcalculator;
+    public UnitController unitcontroller;
+    public UnitGenerator unitgenerator;
 
     [SerializeField]
     public Text text;
@@ -17,6 +19,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         
         fieldgenerator.GenerateField();
+        unitgenerator.GenerateUnits();
 		
 	}
 	

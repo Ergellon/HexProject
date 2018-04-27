@@ -13,7 +13,7 @@ public class FieldGenerator : MonoBehaviour {
     public FieldController fieldController;
     public HexCalculator hexCalculator;
 
-    public GameObject grass, forest, rocks, lake, water;
+    public GameObject grass, forest, rocks, lake, flag, water;
 
 
 
@@ -28,6 +28,8 @@ public class FieldGenerator : MonoBehaviour {
         
         switch(hex.type)                //WHAT THE FUCK
         {
+
+
             case "grass":
                 Hex = grass;
                 break;
@@ -47,6 +49,12 @@ public class FieldGenerator : MonoBehaviour {
                 Debug.Log("smthing goes wrong");
                 break;
         }
+        if(x == 0 && (y == gridsize - 1 || y == -gridsize + 1))
+        {
+            hex.type = "flag";
+            Hex = flag;
+        }
+
 
         truecoords = hexCalculator.HexToPixel(x,y);
         GameObject instance = Instantiate(Hex, truecoords, Quaternion.Euler(0, 0, 0)); //Creating visual hex

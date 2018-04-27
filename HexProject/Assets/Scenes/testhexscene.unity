@@ -306,6 +306,8 @@ MonoBehaviour:
   fieldcontroller: {fileID: 700890539}
   maincamera: {fileID: 627784564}
   hexcalculator: {fileID: 373090034}
+  unitcontroller: {fileID: 1862442653}
+  unitgenerator: {fileID: 1155052006}
   text: {fileID: 1669139412}
   text2: {fileID: 1913057730}
 --- !u!4 &1041516241
@@ -348,6 +350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7031728dc25975349bba66cdee2f6c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit1pos: {x: 0, y: 2}
+  unit2pos: {x: 0, y: -2}
+  unitcontroller: {fileID: 1862442653}
+  hexcalculator: {fileID: 373090034}
+  infantry: {fileID: 1766793690033890, guid: 84b426c1195c6a54696cc031f2f4fd9d, type: 2}
 --- !u!4 &1155052007
 Transform:
   m_ObjectHideFlags: 0
@@ -396,6 +403,7 @@ MonoBehaviour:
   forest: {fileID: 1114802860710994, guid: 828fe24fce7e03e43a0e01d759ca0a28, type: 2}
   rocks: {fileID: 1019469086548512, guid: 18c6c8e98811bcc45a804534c00c6bbf, type: 2}
   lake: {fileID: 1972625362318318, guid: 8624c47b961d1404493ece56be2362a7, type: 2}
+  flag: {fileID: 1758505164396650, guid: ecf8166872bbc4845b5a75881a6a0576, type: 2}
   water: {fileID: 1281600694289154, guid: 7e318a8e3d5f04e46b89519b84c7b3d5, type: 2}
 --- !u!4 &1290287027
 Transform:

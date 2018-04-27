@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="HexProject.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitController.cs">
     <Files>
-      <File FileName="Assets\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnitController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
